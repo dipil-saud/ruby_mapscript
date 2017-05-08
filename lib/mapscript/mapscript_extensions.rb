@@ -25,7 +25,7 @@ module Mapscript
 
     def [](idx)
       case idx
-        when Fixnum
+        when Integer
           if idx >= 0
             @parent.send(@getter, idx)
           else
@@ -50,7 +50,7 @@ module Mapscript
 
     def [](idx)
       case idx
-        when Fixnum
+        when Integer
           if idx >= 0
             @map.getLayer(idx)
           else
@@ -77,10 +77,10 @@ module Mapscript
       super(layer, :numclasses, :getClass)
       @layer = layer
     end
- 
+
     def [](idx)
       case idx
-        when Fixnum
+        when Integer
           if idx >= 0
             @layer.getClass(idx)
           else
